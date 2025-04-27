@@ -1,30 +1,38 @@
+<!--
+Credit
+    - Icons => https://icon-sets.iconify.design/pixelarticons/
+-->
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/general.css">
-        <title>CoderDojo Eniwa</title>
+        <title>CoderDojo Eniwa公式ホームページ</title>
     </head>
     <body>
         <header>
             <div class="header_container">
                 <img src="assets/logo.png" class="header_logo">
-                <p class="header_text">(Re:)CoderDojo Eniwa</p>
+                <a class="header_text">(Re:)CoderDojo Eniwa</a>
                 <div class="header_links_container">
-                    <a class="header_link">参加する</a>
-                    <a class="header_link">ブログ</a>
-                    <a class="header_link">メンター紹介</a>
+                    <a class="header_link" href="#about_participation">参加する</a>
+                    <a class="header_link">ブログ(準備中)</a>
+                    <a class="header_link">メンター紹介(準備中)</a>
                 </div>
             </div>
         </header>
         <main>
+            <!-- Hero Section -->
             <div class="thumbnail">
-                <img class="thumbnail_icon" src="./assets/logo.png" width="300pt" height="300pt">
+                <img class="thumbnail_icon" src="./assets/logo.png">
                 <p class="logo_text">(Re:)CoderDojo Eniwa</p>
             </div>
-            <div class="h_container">
-                <img class="h_icon" src="./assets/icons/pixelarticons--avatar.svg">
-                <h2 class="heading">私たちについて</h2>
+
+            <!-- About CoderDojo -->
+            <div class="h_container" id="about_coderdojo">
+                <img class="h_icon" src="./assets/icons/mingcute--yinyang-fill.svg">
+                <h2 class="heading">CoderDojo</h2>
             </div>
             <div>
                 <p>
@@ -39,19 +47,123 @@
                     子ども同士で作品を発表しあう機会を設けたりなど、
                     参加者の自発的な学びや参加者同士の学び合いを推奨しています。
                     これは受け身で何かを教わることよりも、作りながら
-                    主体的に学ぶことに価値があると考えているからです。
+                    主体的に学ぶことに価値があると考えているためです。
                     このため多くの CoderDojo は、
                     子ども達自身の興味・関心を追究する「広場」のような場所となっています。
-                </p>
-                <p>
-                    CoderDojo の特徴は、オープンソースソフトウェア (OSS) の文化に
-                    根付いた非営利のコミュニティである点です。例えば PHP や Perl, Python, Ruby
-                    といったそれぞれのコミュニティが横断的に関わっており、中には
-                    OSS の第一線で活躍される方々にもご協力していただいております。
-                    現在はエンジニアやデザイナーだけでなく、各地域の保護者や学生、研究者や
-                    経営者などにも広がりを見せています。
+                    詳細は<a href="https://coderdojo.jp/charter">Coder憲章</a>をご覧ください。
                 </p>
             </div>
+
+            <!-- About Activity Details -->
+            <div class="h_container">
+                <img class="h_icon" src="./assets/icons/mingcute--user-add-2-fill.svg">
+                <h2 class="heading">活動内容</h2>
+            </div>
+            <div>
+                <h3 class="subheading">Scratch</h3>
+                <div class="h_container">
+                    <img src="assets/work_examples/scratch_1.png" class="work_example">
+                    <div>
+                        <p>対象 / プログラミングが初めての参加者</p>
+                        <p>
+                            Scratchはアメリカにある非営利団体Scratch財団が
+                            子供のプログラミング的思考力を養うという目的を掲げ
+                            マサチューセッツ工科大学と協働開発したプログラミング言語で、
+                            ブロック状の’プログラミングブロック’をつなぎ合わせることで
+                            子供でも簡単にゲームなどを制作することができます。
+                        </p>
+                        <p>
+                            CoderDojoの中でも特に子供たちに人気のコンテンツであり、
+                            相互に影響を与え合いながら自分の作品を改良する様子も見られます。
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="subheading">Godot</h3>
+                <div class="h_container">
+                    <img src="assets/work_examples/godot_1.png" class="work_example">
+                    <div>
+                        <p>対象 / ある程度プログラミングに慣れている参加者</p>
+                        <p>
+                            Godotはオープンソース(プログラムの設計図が公開されており、
+                            誰もが自由に利用/改造/派生されられる状態)のゲーム制作ソフトです。
+                            GDScriptという比較的簡単なプログラミング言語を用いてゲームを制作することができ、
+                            プロのゲーム開発者も利用するほど高機能です。
+                        </p>
+                        <p>
+                            Scratchを既にマスターしてしまった子や、すでにプログラミングに
+                            慣れている子などを想定しています。
+                            ちなみに、Godotでゲームを作ると作ったゲームの販売もできます。
+                            このレベルに到達すれば既にプロと同じ土俵に立っています。
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="subheading">Minecraft</h3>
+                <div class="h_container">
+                    <img src="assets/work_examples/godot_1.png" class="work_example">
+                    <div>
+                        <p>対象 / --</p>
+                        <p>
+                            MinecraftはMojangによって開発されたサンドボックスゲームで、
+                            プレイヤーはブロックを組み合わせてほとんど何もかもを作ることができます。
+                        </p>
+                        <p>
+                            CoderDojoにおいて、Minecraftは'キーボードとマウスに慣れる'、
+                            '想像から創造する経験を育む'、'他のメンバーとのコミュニケーションを促進する'など
+                            単なるゲーム以上の役割を持ちます。特に、コマンドと呼ばれるマインクラフトの中で
+                            動作するプログラミング言語は多くの参加者がプログラミングに興味を持ち始める発火材となっています。
+                        </p>
+                    </div>
+                </div>
+                <p>ここにある内容は一例であり、このリストにないものであってもメンターは参加者が興味を持ったものへの挑戦をサポートします。</p>
+            </div>
+
+
+            <!-- About Participation -->
+            <div class="h_container" id="about_participation">
+                <img class="h_icon" src="./assets/icons/mingcute--user-add-2-fill.svg">
+                <h2 class="heading">参加</h2>
+            </div>
+            <div>
+                <p>
+                    現在、CoderDojo Eniwaは月の最終日曜日に
+                    多目的スペースJunctionの二階のスペースをお借りして開催しています。
+                    お気軽に<a href="https://docs.google.com/forms/d/e/1FAIpQLSeCYWfwvH88Lha3hIONAvgvMyEfrSKR_7mRo3wE07gnyd2T_A/viewform">こちらのリンク</a>からご参加ください。
+                    CoderDojo Eniwaでは7~17歳の方を対象にしています。
+                    貸し出しもありますが、台数に限りがありますのでパソコンや
+                    マウスなどは持参いただくことを推奨しています。パソコンを持っていなくても
+                    参加は可能ですのでご安心ください。保護者の参加も歓迎していますが、
+                    必須ではありません。参加はCoderDojo憲章に基づき恒久的、完全に無料です。
+                </p>
+                <p>
+                    当日の流れとしては、9時半時開催、12時に今日作ったものや前回の参加からの
+                    間に作ったものなどで発表したいものがある子は発表して終了といった形になります。
+                    途中参加、途中退出は自由です。開場での飲食についても特に制限はありません。
+                </p>
+                <p>
+                    会場のJunction(〒061-1355 北海道恵庭市島松寿町１丁目２８−１０)は
+                    一階にカフェやレストランなども入っている多目的スペースです。
+                    駐車場はありますが、長時間の駐車は駐車場の逼迫につながる恐れがありますので、
+                    保護者の方におかれましては、可能であれば送迎以外は別の場所への駐車をお願いしております。
+                    JR島松駅からのアクセスが非常に良好なため、電車を利用してのご参加もおすすめです。
+                </p>
+                <p>
+                    CoderDojo Eniwaでは活動中の写真を記録として残しておりますが、顔を写さない、
+                    写真を嫌がる子は写らないようにするなど個人情報の保護を徹底しております。
+                    写真は特にセンシティブな情報ですので、追加の配慮等が必要な場合はご気軽に相談いただければと思います。
+                </p>
+                <p>
+                    参加に際して、参加者のお子様の安全はCoderDojo憲章に基づき、
+                    メンターが自主性を損なわない範囲で最大限確保します。お子様が特定の困難を抱えている場合など、
+                    特別な配慮が必要な場合は事前にご連絡いただければ最大限対応させていただきます。
+                </p>
+            </div>
+
         </main>
+
+        <footer>
+
+        </footer>
     </body>
 </html>
