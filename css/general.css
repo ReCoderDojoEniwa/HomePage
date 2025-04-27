@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url(../assets/fonts/SourceCodePro-Medium.otf);
+}
+@font-face {
+    font-family: 'SHS';
+    src: url(../assets/fonts/SourceHanSansHW-Regular.otf);
+}
+
+html, body {
+    background: white;
+    min-height: 100%;
+}
+main {
+    margin-left: 40pt;
+    margin-right: 40pt;
+}
+p {
+    margin-left: 50pt;
+    margin-right: 50pt;
+    color: black;
+    font-family: 'SHS';
+    font-size: 15pt;
+    line-height: 30pt;
+}
+
+.h_container {
+    display: flex;
+    align-items: center;
+}
+.h_icon {
+    width: 50pt;
+    height: 50pt;
+}
+.heading {
+    color: black;
+    font-family: 'SHS';
+    font-size: 30pt;
+}
+.header_container {
+    display: flex;
+    align-items: center;
+    margin-left: 50pt;
+    margin-right: 50pt;
+}
+.header_logo {
+    width: 40pt;
+    height: 40pt;
+}
+.header_text {
+    color: black;
+    font-family: 'Source Code Pro';
+    font-size: 20pt;
+}
+.header_links_container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.header_link {
+    margin-right: 20pt;
+    color: black;
+    font-family: 'SHS';
+    font-size: 15pt;
+}
+.thumbnail {
+    width: 100%;
+    margin-top: 50pt;
+}
+.thumbnail_icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo_text {
+    text-align: center;
+    color: black;
+    font-family: 'Source Code Pro';
+    font-size: 25pt;
+}
