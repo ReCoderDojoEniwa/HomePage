@@ -11,29 +11,37 @@ html, body {
     background: white;
     min-height: 100%;
 }
-main {
-    margin-left: 10%;
-    margin-right: 10%;
-    max-width: 1024pt;
-}
 p {
-    margin-left: 50pt;
-    margin-right: 50pt;
+    margin-left: 5%;
+    margin-right: 5%;
     color: black;
     font-family: 'SHS';
-    font-size: 13pt;
-    line-height: 30pt;
+    line-height: 2;
 }
-
+.heading {
+    color: black;
+    font-family: 'SHS';
+}
+.subheading {
+    color: rgb(32, 32, 32);
+    font-family: 'SHS';
+}
+.header_links_container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.header_text {
+    text-decoration: none;
+    color: black;
+    font-family: 'Source Code Pro';
+}
 .below_buttons {
     font-family: 'SHS';
     text-decoration: none;
     color: white;
     background-color: black;
     text-align: center;
-    padding: 7pt;
-    border-radius: 25pt;
-    margin: 2pt;
 }
 .h_container {
     width: 100%;
@@ -46,47 +54,11 @@ p {
     justify-content: center;
     margin: 60pt;
 }
-.h_icon {
-    width: 12%;
-    max-width: 50pt;
-}
-.heading {
-    color: black;
-    font-family: 'SHS';
-    font-size: 30pt;
-}
-.subheading {
-    color: rgb(32, 32, 32);
-    font-family: 'SHS';
-    font-size:25pt;
-}
 .header_container {
     display: flex;
     align-items: center;
-    margin-left: 50pt;
-    margin-right: 50pt;
-}
-.header_logo {
-    width: 60pt;
-    height: 60pt;
-}
-.header_text {
-    text-decoration: none;
-    color: black;
-    font-family: 'Source Code Pro';
-    font-size: 20pt;
-}
-.header_links_container {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-.header_link {
-    text-decoration: none;
-    margin-right: 20pt;
-    color: black;
-    font-family: 'SHS';
-    font-size: 15pt;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 .thumbnail {
     width: 100%;
@@ -103,10 +75,58 @@ p {
     text-align: center;
     color: black;
     font-family: 'Source Code Pro';
-    font-size: 25pt;
 }
-.work_example {
-    min-width: 40%;
-    max-width: 40%;
-    border-radius: 30pt;
+
+@media (orientation: landscape) {
+    main {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1024pt;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .logo_text {
+        font-size: 2rem;
+    }
+    .below_buttons {
+        padding: 7pt;
+        border-radius: 25pt;
+        margin: 2pt;
+        font-size: 1.3rem;
+    }
+    .header_text {
+        font-size: 20pt;
+    }
+    .header_link {
+        text-decoration: none;
+        margin-right: 20pt;
+        color: black;
+        font-family: 'SHS';
+        font-size: 15pt;
+    }
+    .header_logo {
+        height: 60pt;
+        width: 60pt;
+    }
+    .work_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .work_example {
+        min-width: 40%;
+        max-width: 40%;
+        border-radius: 30pt;
+    }
+    .heading {
+        font-size: 2.5rem;
+    }
+    .subheading {
+        font-size:2rem;
+    }
+    .h_icon {
+        width: 12%;
+        max-width: 50pt;
+    }
 }
