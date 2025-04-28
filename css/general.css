@@ -26,6 +26,7 @@ p {
 }
 
 .below_buttons {
+    font-family: 'SHS';
     text-decoration: none;
     color: white;
     background-color: black;
@@ -70,6 +71,7 @@ p {
     height: 60pt;
 }
 .header_text {
+    text-decoration: none;
     color: black;
     font-family: 'Source Code Pro';
     font-size: 20pt;
@@ -80,6 +82,7 @@ p {
     align-items: center;
 }
 .header_link {
+    text-decoration: none;
     margin-right: 20pt;
     color: black;
     font-family: 'SHS';
