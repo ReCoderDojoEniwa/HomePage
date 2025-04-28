@@ -12,8 +12,8 @@ html, body {
     min-height: 100%;
 }
 main {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     max-width: 1024pt;
 }
 p {
@@ -25,9 +25,26 @@ p {
     line-height: 30pt;
 }
 
+.below_buttons {
+    font-family: 'SHS';
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 7pt;
+    border-radius: 25pt;
+    margin: 2pt;
+}
 .h_container {
+    width: 100%;
     display: flex;
     align-items: center;
+}
+.below_buttons_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60pt;
 }
 .h_icon {
     width: 12%;
@@ -54,6 +71,7 @@ p {
     height: 60pt;
 }
 .header_text {
+    text-decoration: none;
     color: black;
     font-family: 'Source Code Pro';
     font-size: 20pt;
@@ -64,6 +82,7 @@ p {
     align-items: center;
 }
 .header_link {
+    text-decoration: none;
     margin-right: 20pt;
     color: black;
     font-family: 'SHS';

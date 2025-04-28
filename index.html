@@ -8,21 +8,59 @@ Credit
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/general.css">
-        <title>CoderDojo Eniwa公式ホームページ</title>
+        <!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <title>CoderDojo Eniwa 公式ホームページ | 恵庭の子供向けプログラミング道場</title>
+        <meta name="description" content="
+            北海道恵庭市で開催されている無料のプログラミングイベント、
+            CoderDojo Eniwa（コーダー道場 恵庭）の公式ホームページです。
+            7歳〜17歳のお子様を対象に、メンターがお子様の「やりたいこと」を
+            サポートします。参加者のみなさまにはMinecraftやScratchなどが人気です。
+        ">
+        <meta name="keywords" content="CoderDojo Eniwa, コーダー道場 恵庭,
+            子供 プログラミング, ジュニア プログラミング, 恵庭市, 北海道,
+            Scratch, Godot, Minecraft, 無料, 体験, 小学生 プログラミング,
+            中学生 プログラミング
+        ">
+        <meta property="og:url" content="https://recoderdojoeniwa.github.io/HomePage/">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="恵庭の子供向けプログラミング道場 | CoderDojo Eniwa 公式ホームページ">
+        <meta property="og:description" content="
+            北海道恵庭市で開催されている無料のプログラミングイベント、
+            CoderDojo Eniwa（コーダー道場 恵庭）の公式ホームページです。
+            7歳〜17歳のお子様を対象に、メンターがお子様の「やりたいこと」を
+            サポートします。参加者のみなさまにはMinecraftやScratchなどが人気です。
+        ">
+        <meta property="og:site_name" content="CoderDojo Eniwa 公式ホームページ">
+        <meta property="og:image" content="./assets/thumbnail.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="恵庭の子供向けプログラミング道場 | CoderDojo Eniwa 公式ホームページ">
+        <meta name="twitter:description" content="
+            北海道恵庭市で開催されている無料のプログラミングイベント、
+            CoderDojo Eniwa（コーダー道場 恵庭）の公式ホームページです。
+            7歳〜17歳のお子様を対象に、メンターがお子様の「やりたいこと」を
+            サポートします。参加者のみなさまにはMinecraftやScratchなどが人気です。
+        ">
+        <meta name="twitter:image" content="./assets/thumbnail.png">
+        <link rel="canonical" href="https://recoderdojoeniwa.github.io/HomePage/">
     </head>
     <body>
         <header>
             <div class="header_container">
                 <img src="assets/logo.png" class="header_logo">
-                <a class="header_text">(Re:)CoderDojo Eniwa</a>
+                <a class="header_text" href="./index.html">(Re:)CoderDojo Eniwa</a>
                 <div class="header_links_container">
-                    <a class="header_link" href="#about_participation">参加する</a>
+                    <a class="header_link" href="index.html#about_participation">参加する</a>
                     <a class="header_link">ブログ(準備中)</a>
-                    <a class="header_link">メンター紹介(準備中)</a>
+                    <a class="header_link" href="./mentors.html">メンター紹介</a>
                 </div>
             </div>
         </header>
-        <main>
+        <main id="the_top">
             <!-- Hero Section -->
             <div class="thumbnail">
                 <img class="thumbnail_icon" src="./assets/logo.png">
@@ -93,8 +131,6 @@ Credit
                         <p>
                             Scratchを既にマスターしてしまった子や、すでにプログラミングに
                             慣れている子などを想定しています。
-                            ちなみに、Godotでゲームを作ると作ったゲームの販売もできます。
-                            このレベルに到達すれば既にプロと同じ土俵に立っています。
                         </p>
                     </div>
                 </div>
@@ -103,16 +139,18 @@ Credit
                 <div class="h_container">
                     <img src="assets/work_examples/godot_1.png" class="work_example">
                     <div>
-                        <p>対象 / --</p>
+                        <p>対象 / 誰でも</p>
                         <p>
                             MinecraftはMojangによって開発されたサンドボックスゲームで、
                             プレイヤーはブロックを組み合わせてほとんど何もかもを作ることができます。
                         </p>
                         <p>
                             CoderDojoにおいて、Minecraftは'キーボードとマウスに慣れる'、
-                            '想像から創造する経験を育む'、'他のメンバーとのコミュニケーションを促進する'など
+                            '想像から創造する経験を育む'、'他のメンバーとのコミュニケーションを促進する'、
+                            'MODの導入などを通してファイル、フォルダ、インストールといった概念を理解する'など
                             単なるゲーム以上の役割を持ちます。特に、コマンドと呼ばれるマインクラフトの中で
-                            動作するプログラミング言語は多くの参加者がプログラミングに興味を持ち始める発火材となっています。
+                            動作するプログラミング言語は多くの参加者がプログラミングに
+                            興味を持ち始める発火材となっています。
                         </p>
                     </div>
                 </div>
@@ -155,7 +193,7 @@ Credit
                 </p>
                 <p>
                     参加に際して、参加者のお子様の安全はCoderDojo憲章に基づき、
-                    メンターが自主性を損なわない範囲で最大限確保します。お子様が特定の困難を抱えている場合など、
+                    メンターが参加者の自主性を損なわない範囲で最大限確保します。お子様が特定の困難を抱えている場合など、
                     特別な配慮が必要な場合は事前にご連絡いただければ最大限対応させていただきます。
                 </p>
             </div>
@@ -163,7 +201,11 @@ Credit
         </main>
 
         <footer>
-
+            <div class="below_buttons_container">
+                <a class="below_buttons" href="./index.html">トップに戻る</a>
+                <a class="below_buttons" href="./mentors.html">メンター紹介へ</a>
+            </div>
+            <p>連絡先 / coderdojoeniwa@gmail.com</p>
         </footer>
     </body>
 </html>
