@@ -1,0 +1,47 @@
+.header_links_container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.header_text {
+    text-decoration: none;
+    color: black;
+    font-family: 'Source Code Pro';
+}
+.header_container {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+@media (orientation: landscape) {
+    .header_text {
+        font-size: 20pt;
+    }
+    .header_link {
+        text-decoration: none;
+        margin-right: 20pt;
+        color: black;
+        font-family: 'SHS';
+        font-size: 15pt;
+    }
+    .header_logo {
+        height: 60pt;
+        width: 60pt;
+    }
+}
+@media (orientation: portrait) {
+    .header_logo {
+        display: none;
+    }
+    .header_text {
+        font-size: 3rem;
+    }
+    .header_text {
+        display: none;
+    }
+    .header_link {
+        display: none;
+    }
+}

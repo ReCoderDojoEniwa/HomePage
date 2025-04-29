@@ -26,16 +26,6 @@ p {
     color: rgb(32, 32, 32);
     font-family: 'SHS';
 }
-.header_links_container {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-.header_text {
-    text-decoration: none;
-    color: black;
-    font-family: 'Source Code Pro';
-}
 .below_buttons {
     font-family: 'SHS';
     text-decoration: none;
@@ -43,38 +33,13 @@ p {
     background-color: black;
     text-align: center;
 }
-.h_container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
 .below_buttons_container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 60pt;
-}
-.header_container {
-    display: flex;
-    align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.thumbnail {
-    width: 100%;
-    margin-top: 50pt;
-}
-.thumbnail_icon {
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    max-width: 250pt;
-}
-.logo_text {
-    text-align: center;
-    color: black;
-    font-family: 'Source Code Pro';
+    margin-top: 100pt;
+    max-width: 300pt;
 }
 
 @media (orientation: landscape) {
@@ -86,38 +51,11 @@ p {
     p {
         font-size: 1.2rem;
     }
-    .logo_text {
-        font-size: 2rem;
-    }
     .below_buttons {
         padding: 7pt;
         border-radius: 25pt;
         margin: 2pt;
         font-size: 1.3rem;
-    }
-    .header_text {
-        font-size: 20pt;
-    }
-    .header_link {
-        text-decoration: none;
-        margin-right: 20pt;
-        color: black;
-        font-family: 'SHS';
-        font-size: 15pt;
-    }
-    .header_logo {
-        height: 60pt;
-        width: 60pt;
-    }
-    .work_container {
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
-    .work_example {
-        min-width: 40%;
-        max-width: 40%;
-        border-radius: 30pt;
     }
     .heading {
         font-size: 2.5rem;
@@ -128,5 +66,29 @@ p {
     .h_icon {
         width: 12%;
         max-width: 50pt;
+    }
+}
+@media (orientation: portrait) {
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .heading {
+        font-size: 1.5rem;
+    }
+    .subheading {
+        font-size:1.25rem;
+    }
+    .below_buttons {
+        padding: 0.75rem;
+        border-radius: 3rem;
+        margin: 0.1rem;
+        font-size: 1rem;
+    }
+    .h_icon {
+        width: 3rem;
     }
 }

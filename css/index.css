@@ -1,0 +1,45 @@
+.thumbnail {
+    width: 100%;
+    margin-top: 50pt;
+}
+.thumbnail_icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 250pt;
+}
+.logo_text {
+    text-align: center;
+    color: black;
+    font-family: 'Source Code Pro';
+}
+
+@media (orientation: landscape) {
+    .work_container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .work_example {
+        min-width: 40%;
+        max-width: 40%;
+        border-radius: 30pt;
+    }
+    .logo_text {
+        font-size: 2rem;
+    }
+}
+@media (orientation: portrait) {
+    .work_container {
+        width: 100%;
+    }
+    .work_example {
+        min-width: 100%;
+        max-width: 100%;
+        border-radius: 20pt;
+    }
+    .logo_text {
+        font-size: 1rem;
+    }
+}
