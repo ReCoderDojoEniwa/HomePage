@@ -1,0 +1,1 @@
+/home/kinokovs/Desktop/HomePage/blogs/blog_parser/target/debug/blog_parser: /home/kinokovs/Desktop/HomePage/blogs/blog_parser/src/main.rs /home/kinokovs/Desktop/HomePage/blogs/blog_parser/src/parser.rs

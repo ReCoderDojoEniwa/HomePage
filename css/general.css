@@ -9,7 +9,7 @@
 
 html, body {
     background: white;
-    min-height: 100%;
+    min-height: 100vh;
 }
 p {
     margin-left: 5%;
@@ -32,6 +32,11 @@ p {
     color: white;
     background-color: black;
     text-align: center;
+}
+.h_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .below_buttons_container {
     display: flex;

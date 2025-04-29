@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">        
+        <link rel="stylesheet" type="text/css" href="../css/general.css">
+        <link rel="stylesheet" type="text/css" href="../css/header.css">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/blog.css">
+        <!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <title>CoderDojo Eniwa 公式ホームページ | 恵庭の子供向けプログラミング道場</title>
+    </head>
+    <body>
+        <header>
+            <div class="header_container">
+                <img src="../assets/logo.png" class="header_logo">
+                <a class="header_text" href="./index.html">(Re:)CoderDojo Eniwa(Doc)</a>
+            </div>
+        </header>
+        <main>
+            <h1 class="heading">パーサの使い方</h1>
+            <h2 class="subheading">概要</h2>
+            <p>
+                パーサは独自のブログ用拡張子、brawファイルをhtmlに
+                変換するためのツールです。Rustで書かれており、
+                ソースコードはblog_parserの中にあります。
+                使う分にはLinuxならb_parser、Windowsならb_parser.exeを実行するだけです。
+                何も出ませんが実行されています。パース結果はblogs_parsedの中です。
+            </p>
+            <h2 class="subheading">brawの文法</h2>
+            <p>
+                先頭に'#'をつけるとヘディング(このページだと'パーサの使い方')、
+                '##'と繰り返すとサブヘディング(このページだと'概要'や'brawの文法')になります。
+                なにもつけなければ本文になります。
+            </p>
+            <p>
+                画像を表示したい場合は同じディレクトリの中に画像を入れ、
+                '!image hoge.png'のように表記します。ところで、'!'を先頭につけた行は
+                "何かしらの特殊な要素として扱われようとする"ので本文にはなり得ません。
+            </p>
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>
