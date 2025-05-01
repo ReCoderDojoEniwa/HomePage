@@ -2,6 +2,8 @@ mod parser;
 
 use std::{env, fs::{read_to_string, File}, io::Write, path::PathBuf};
 
+use parser::Blog;
+
 fn save(path:&PathBuf, inside:&str) {
     match File::create(path) {
         Ok(mut file) => {
@@ -35,7 +37,7 @@ fn main() {
     let template = get_fullpath_with_check("blog_template.html");
     let index_template = get_fullpath_with_check("blog_index_template.html");
 
-    let mut indexs = Vec::new();
+    let mut blogs:Vec<(Blog, PathBuf)> = Vec::new();
     let blog_folders = blogs_raw
         .read_dir()
         .unwrap()
@@ -64,8 +66,17 @@ fn main() {
         let blog = parser::braw_to_blog(&braw).unwrap();
         let parsed_path = blogs_parsed.join(format!("{}.html", blog.title));
         save(&parsed_path, blog.to_html(&blogs_parsed, &blog_folder.path(), &template).unwrap().as_str());
-        indexs.push(blog.get_index(&cur_path, &parsed_path));
+        blogs.push((blog, parsed_path));
     }
+    blogs
+        .sort_by(
+            |a, b| {
+                b.0.meta.date.cmp(&a.0.meta.date)
+        });
+    let indexs = blogs
+        .iter()
+        .map(|f| f.0.get_index(&cur_path, &f.1))
+        .collect::<Vec<_>>();
     save(
         &cur_path.join("blog_index.html"),
         read_to_string(index_template)

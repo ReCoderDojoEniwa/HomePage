@@ -7,8 +7,8 @@
 .blog_thumbnail {
     margin-left: 5%;
     margin-right: 5%;
-    width: 75%;
-    max-width: 25rem;
+    width: 300px;
+    height: auto;
     border-radius: 4vh;
 }
 .blog_title {
