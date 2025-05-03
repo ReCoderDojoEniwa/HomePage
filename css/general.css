@@ -11,6 +11,9 @@ html, body {
     background: white;
     min-height: 100vh;
 }
+a {
+    font-family: 'SHS';
+}
 p {
     margin-left: 5%;
     margin-right: 5%;
@@ -40,22 +43,22 @@ p {
 }
 .below_buttons_container {
     display: flex;
+    width: 100%;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
     margin-top: 100pt;
-    max-width: 300pt;
+}
+main {
+    margin-top: 100pt;
 }
 
 @media (orientation: landscape) {
-    /* 画面サイズが1024pt以下のとき5%分の余白をつけてやる */
     @media (max-width:1024pt) {
         main {
             margin-left: 5%;
             margin-right: 5%;
         }
     }
-    /* でなければ1024pt分を確保して中央寄せ */
     @media (min-width:1024pt) {
         main {
             margin-left: auto;

@@ -9,10 +9,20 @@
     font-family: 'Source Code Pro';
 }
 .header_container {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.336);
+    backdrop-filter: blur(20px);
+
     display: flex;
     align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
 }
 
 @media (orientation: landscape) {
@@ -33,13 +43,10 @@
 }
 @media (orientation: portrait) {
     .header_logo {
-        display: none;
+        width: 3rem;
     }
     .header_text {
-        font-size: 3rem;
-    }
-    .header_text {
-        display: none;
+        font-size: 1.3rem;
     }
     .header_link {
         display: none;
