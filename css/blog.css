@@ -2,15 +2,11 @@
     margin-left: 5%;
     border-radius: 2rem;
     object-fit: contain;
-    max-width: 50rem;
-    max-height: 30rem;
 }
 .blog_thumbnail {
     object-fit: cover;
     margin-left: 5%;
     margin-right: 5%;
-    width: 300px;
-    height: 225px;
     border-radius: 4vh;
     flex-shrink: 0;
 }
@@ -27,9 +23,24 @@
         display: flex;
         align-items: center;
     }
+    .image {
+        max-width: 50rem;
+        max-height: 30rem;
+    }
+    .blog_thumbnail {
+        width: 300px;
+        height: 225px;
+    }
 }
 @media (orientation: portrait) {
     .blog_container {
         display: list-item;
+    }
+    .image {
+        width: 90%;
+    }
+    .blog_thumbnail {
+        width: 90%;
+        height: 20rem;
     }
 }

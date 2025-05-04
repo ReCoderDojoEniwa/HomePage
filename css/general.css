@@ -49,7 +49,7 @@ p {
     margin-top: 100pt;
 }
 main {
-    margin-top: 100pt;
+    padding-top: 100pt;
 }
 
 @media (orientation: landscape) {
