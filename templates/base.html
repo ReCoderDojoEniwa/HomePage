@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/general.css") }}" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/header.css") }}" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/index.css") }}" />
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+        <meta
+            name="description"
+            content="
+            北海道恵庭市で開催されている無料のプログラミングイベント、
+            CoderDojo Eniwa（コーダー道場 恵庭）の公式ホームページです。
+            7歳〜17歳のお子様を対象に、メンターがお子様の「やりたいこと」を
+            サポートします。参加者のみなさまにはMinecraftやScratchなどが人気です。
+        "
+        />
+        <meta
+            name="keywords"
+            content="CoderDojo Eniwa, コーダー道場 恵庭,
+            子供 プログラミング, ジュニア プログラミング, 恵庭市, 北海道,
+            Scratch, Godot, Minecraft, 無料, 体験, 小学生 プログラミング,
+            中学生 プログラミング
+        "
+        />
+        <meta
+            property="og:url"
+            content="https://recoderdojoeniwa.github.io/HomePage/"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="恵庭の子供向けプログラミング道場 | CoderDojo Eniwa 公式ホームページ"
+        />
+        <meta
+            property="og:description"
+            content="
+            北海道恵庭市で開催されている無料のプログラミングイベント、
+            CoderDojo Eniwa（コーダー道場 恵庭）の公式ホームページです。
+            7歳〜17歳のお子様を対象に、メンターがお子様の「やりたいこと」を
+            サポートします。参加者のみなさまにはMinecraftやScratchなどが人気です。
+        "
+        />
+        <meta
+            property="og:site_name"
+            content="CoderDojo Eniwa 公式ホームページ"
+        />
+        <meta property="og:image" content="{{ get_url(path="thumbnail.png") }}" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="恵庭の子供向けプログラミング道場 | CoderDojo Eniwa 公式ホームページ"
+        />
+        <meta
+            name="twitter:description"
+            content="
+            北海道恵庭市で開催されている無料のプログラミングイベント、
+            CoderDojo Eniwa（コーダー道場 恵庭）の公式ホームページです。
+            7歳〜17歳のお子様を対象に、メンターがお子様の「やりたいこと」を
+            サポートします。参加者のみなさまにはMinecraftやScratchなどが人気です。
+        "
+        />
+        <meta name="twitter:image" content="{{ get_url(path="thumbnail.png") }}" />
+        <link
+            rel="canonical"
+            href="https://recoderdojoeniwa.github.io/HomePage/"
+        />
+        {% block extra_head %}{% endblock extra_head %}
+    </head>
+    <body>
+        <header>
+            <div class="header_container">
+                <img src="{{ get_url(path="logo.png") }}" class="header_logo">
+                <a class="header_text" href="{{ get_url(path="") }}">(Re:)CoderDojo Eniwa</a>
+                <div class="header_links_container">
+                    <a class="header_link" href="{{ get_url(path="") }}#about_participation">参加する</a>
+                    <a class="header_link" href="{{ get_url(path="blogs/blog_index.html") }}">ブログ</a>
+                    <a class="header_link" href="{{ get_url(path="mentors.html") }}">メンター紹介</a>
+                </div>
+            </div>
+        </header>
+
+        {% block content %} {% endblock content %}
+
+        <footer>
+            <div class="below_buttons_container">
+                <a class="below_buttons" href="{{ get_url(path="") }}">トップに戻る</a>
+                <a class="below_buttons" href="{{ get_url(path="mentors.html") }}">メンター紹介へ</a>
+            </div>
+            <p>連絡先 / coderdojoeniwa@gmail.com</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+.work-container {
+    width: 100%;
+    display: flex;
+}
+
+.work-example {
+    min-width: 40%;
+    max-width: 40%;
+    height: auto;
+
+    aspect-ratio: 4/3;
+    object-fit: cover;
+
+    border-radius: 10pt;
+}
+
+.work-detail {
+    width: 100%;
+    padding-left: 20pt;
+}
+
+.work-card-container {
+    background-color: var(--card-color);
+    padding: 15pt;
+    margin-bottom: 30pt;
+    border-radius: 10pt;
+    outline: 1px solid var(--border);
+}
+
+.work-card-text-container p {
+    font-size: 1em;
+}
+
+.work-title-jp {
+    font-weight: 400;
+    line-height: 0;
+    color: color-mix(in srgb, var(--text-color), transparent 30%);
+}
+
+.work-title-en {
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 0;
+    margin-top: 0.9em;
+}
+
+.difficulty {
+    width: fit-content;
+
+    border-radius: 50vh;
+    padding: 0 10pt 0 10pt;
+    margin: 5pt;
+    font-size: 0.9em;
+
+    outline: 1px solid;
+    outline-color: color-mix(in srgb, var(--color), transparent 60%);
+    background-color: color-mix(in srgb, var(--color), transparent 80%);
+    color: var(--color);
+
+    font-weight: 300;
+    text-align: center;
+}
+
+.easy {
+    --color: var(--4th-color);
+}
+
+.normal {
+    --color: var(--1st-color);
+}
+
+.hard {
+    --color: var(--2nd-color);
+}
+
+.lunatic {
+    --color: var(--3rd-color);
+}
+
+.logo_text {
+    text-align: center;
+    color: var(--text-color);
+    font-family: "Source Code Pro";
+    font-size: 1.5em;
+}

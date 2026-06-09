@@ -1,0 +1,24 @@
+<div class="work-card-container">
+    <div class="work-container">
+        <img
+            src="{{ get_url(path='images/work_examples/' ~ image) }}"
+            class="work-example"
+        />
+        <div class="work-detail">
+            <p class="work-title-jp">{{ title_jp }}</p>
+            <p class="work-title-en">{{ title }}</p>
+
+            {% if difficulty == 0 %}
+            <p class="difficulty easy">カンタン</p>
+            {% elif difficulty == 1 %}
+            <p class="difficulty normal">フツウ</p>
+            {% elif difficulty == 2 %}
+            <p class="difficulty hard">ホンカク</p>
+            {% elif difficulty == 3 %}
+            <p class="difficulty lunatic">ゲキカラ</p>
+            {% endif %}
+
+            <div class="work-card-text-container">{{ body | safe }}</div>
+        </div>
+    </div>
+</div>
