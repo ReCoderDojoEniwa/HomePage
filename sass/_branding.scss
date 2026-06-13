@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "SHS";
+    src: url(/fonts/SourceHanSansJP-VF.otf.woff2);
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url(/fonts/SourceCodePro-Medium.otf);
+}
+
+@font-face {
+    font-family: "Shinonome";
+    src: url(/fonts/JF-Dot-Shinonome14.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Shinonome";
+    src: url(/fonts/JF-Dot-Shinonome14B.ttf);
+    font-weight: bold;
+}
+
+@mixin first-deco {
+    margin-left: calc(var(--4th-total) * -1);
+    padding-left: var(--heading-padding);
+
+    box-shadow:
+        var(--1st-total) 0 0 0 var(--1st-color),
+        var(--2nd-total) 0 0 0 var(--2nd-color),
+        var(--3rd-total) 0 0 0 var(--3rd-color),
+        var(--4th-total) 0 0 0 var(--4th-color);
+
+    transition:
+        box-shadow 0.3s ease,
+        padding-left 0.3s ease;
+
+    &:hover {
+        box-shadow:
+            calc(var(--4th-total) / 4) 0 0 0 var(--1st-color),
+            calc(var(--4th-total) / 2) 0 0 0 var(--2nd-color),
+            calc(var(--4th-total) / 4 * 3) 0 0 0 var(--3rd-color),
+            calc(var(--4th-total)) 0 0 0 var(--4th-color);
+
+        padding-left: calc(var(--heading-padding) * 1.5);
+    }
+}
+
+@mixin second-deco {
+    margin-left: calc(var(--3rd-total) * -1);
+
+    box-shadow:
+        var(--1nd-total) 0 0 0 var(--1st-color),
+        var(--2rd-total) 0 0 0 var(--2nd-color),
+        var(--3th-total) 0 0 0 var(--3rd-color);
+}

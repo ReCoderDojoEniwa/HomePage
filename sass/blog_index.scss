@@ -1,0 +1,52 @@
+main {
+    margin: 0 10% 0 10%;
+    max-width: 100%;
+}
+
+.blog-list {
+    --gap-width: 10pt;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-width);
+}
+
+.blog-container {
+    margin-bottom: 10pt;
+    text-decoration: none;
+    width: calc(100% / 4 - var(--gap-width));
+    display: flex;
+    flex-direction: column;
+    transition:
+        opacity 0.3s ease-out,
+        transform 0.3s ease-out;
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .blog-detail {
+        flex-grow: 1;
+        outline: 1pt solid var(--border);
+        padding: 5pt 10pt 5pt 10pt;
+        background-color: var(--card-color);
+        border-radius: 0 0 2vw 2vw;
+    }
+
+    .blog-thumbnail {
+        width: 100%;
+        outline: 1pt solid var(--border);
+        aspect-ratio: 3/2;
+        object-fit: cover;
+
+        border-radius: 2vw 2vw 0 0;
+    }
+}
+
+.blog-container:hover {
+    transform: translateY(-3pt);
+}

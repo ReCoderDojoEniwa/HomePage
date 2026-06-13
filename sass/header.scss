@@ -1,0 +1,65 @@
+.header_links_container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header_text {
+    text-decoration: none;
+    color: black;
+    font-family: "Source Code Pro";
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
+
+    width: 90%;
+    background-color: color-mix(in srgb, var(--header-color), transparent 50%);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+
+    transition: transform 0.3s ease;
+}
+
+header.is-hidden {
+    transform: translateY(-100%);
+}
+
+@media (orientation: landscape) {
+    .header_text {
+        font-size: 20pt;
+    }
+    .header_link {
+        text-decoration: none;
+        margin-right: 20pt;
+        color: black;
+        font-family: "SHS";
+        font-size: 15pt;
+    }
+    .header_logo {
+        height: 60pt;
+        width: 60pt;
+    }
+}
+@media (orientation: portrait) {
+    .header_logo {
+        width: 3rem;
+    }
+    .header_text {
+        font-size: 1.3rem;
+    }
+    .header_link {
+        display: none;
+    }
+}

@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/general.css") }}" />
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/header.css") }}" />
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path="css/index.css") }}" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="general.css") }}" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="header.css") }}" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="index.css") }}" />
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
         <meta
             name="description"
@@ -69,17 +69,16 @@
         {% block extra_head %}{% endblock extra_head %}
     </head>
     <body>
-        <header>
-            <div class="header_container">
-                <img src="{{ get_url(path="logo.png") }}" class="header_logo">
-                <a class="header_text" href="{{ get_url(path="") }}">(Re:)CoderDojo Eniwa</a>
-                <div class="header_links_container">
-                    <a class="header_link" href="{{ get_url(path="") }}#about_participation">参加する</a>
-                    <a class="header_link" href="{{ get_url(path="blogs/blog_index.html") }}">ブログ</a>
-                    <a class="header_link" href="{{ get_url(path="mentors.html") }}">メンター紹介</a>
-                </div>
+        <header id="header">
+            <img src="{{ get_url(path="logo.png") }}" class="header_logo">
+            <a class="header_text" href="{{ get_url(path="") }}">(Re:)CoderDojo Eniwa</a>
+            <div class="header_links_container">
+                <a class="header_link" href="{{ get_url(path="") }}#about_participation">参加する</a>
+                <a class="header_link" href="{{ get_url(path="@/blogs/_index.md") }}">ブログ</a>
+                <a class="header_link" href="{{ get_url(path="mentors.html") }}">メンター紹介</a>
             </div>
         </header>
+        <script src="scripts/smart_header.js"></script>
 
         {% block content %} {% endblock content %}
 

@@ -1,0 +1,38 @@
+@use "branding" as *;
+
+h2 {
+    @include first-deco;
+}
+
+.blog_title {
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.blog_container {
+    margin-bottom: 30pt;
+    margin-top: 20pt;
+}
+
+.blog-content {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        display: block;
+        margin: 15pt auto 15pt auto;
+        width: 100%;
+        max-width: 400pt;
+        position: relative;
+        top: 50%;
+        border-radius: 10pt;
+        border: 1px solid var(--border);
+        transition:
+            opacity 0.15s ease-out,
+            transform 0.15s ease-out;
+    }
+
+    img:hover {
+        transform: scale(1.025);
+    }
+}

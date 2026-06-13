@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="blog_index.css") }}" />
+{% endblock %}
+
+{% block content %}
+<main>
+    <h1>{{ section.title }}</h1>
+
+    {% set all_pages = section.pages %}
+    {% for sub1_path in section.subsections %}
+        {% set sub1 = get_section(path=sub1_path) %}
+        {% set_global all_pages = all_pages | concat(with=sub1.pages) %}
+        {% for sub2_path in sub1.subsections %}
+            {% set sub2 = get_section(path=sub2_path) %}
+            {% set_global all_pages = all_pages | concat(with=sub2.pages) %}
+            {% for sub3_path in sub2.subsections %}
+                {% set sub3 = get_section(path=sub3_path) %}
+                {% set_global all_pages = all_pages | concat(with=sub3.pages) %}
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+
+    {% set all_pages = all_pages | sort(attribute="date") | reverse %}
+
+    <div class="blog-list">
+        {% for page in all_pages %}
+        <a href="{{ page.permalink }}" class="blog-container">
+            {% if page.extra.thumbnail %}
+            <img class="blog-thumbnail" src="{{ page.permalink ~ page.extra.thumbnail }}">
+            {% else %}
+            <img class="blog-thumbnail" src="{{ get_url(path="no_image.png") }}">
+            {% endif %}
+            <div class="blog-detail">
+                <p class="date">
+                    {{ page.date | date(format="%Y-%m-%d") }}
+                </p>
+                <h2>{{ page.title }}</h2>
+                <p>
+                    {{ page.summary | default(value=page.content | striptags | truncate(length=40)) }}
+                </p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
