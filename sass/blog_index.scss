@@ -1,3 +1,9 @@
+@use "branding" as *;
+
+h1 {
+    @include first-deco;
+}
+
 main {
     margin: 0 10% 0 10%;
     max-width: 100%;
@@ -20,6 +26,10 @@ main {
     transition:
         opacity 0.3s ease-out,
         transform 0.3s ease-out;
+    outline: 1pt solid var(--border);
+    background-color: var(--card-color);
+    border-radius: 10pt;
+    overflow: hidden;
 
     h2 {
         font-size: 0.9em;
@@ -31,19 +41,13 @@ main {
 
     .blog-detail {
         flex-grow: 1;
-        outline: 1pt solid var(--border);
-        padding: 5pt 10pt 5pt 10pt;
-        background-color: var(--card-color);
-        border-radius: 0 0 2vw 2vw;
+        padding: 7pt;
     }
 
     .blog-thumbnail {
         width: 100%;
-        outline: 1pt solid var(--border);
         aspect-ratio: 3/2;
         object-fit: cover;
-
-        border-radius: 2vw 2vw 0 0;
     }
 }
 

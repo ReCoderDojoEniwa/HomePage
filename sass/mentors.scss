@@ -1,0 +1,10 @@
+@use "branding" as *;
+
+h2,
+h3 {
+    @include first-deco;
+}
+
+p {
+    padding-left: 10pt;
+}

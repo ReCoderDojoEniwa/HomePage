@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="general.css") }}" />
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="header.css") }}" />
-        <link rel="stylesheet" type="text/css" href="{{ get_url(path="index.css") }}" />
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
         <meta
             name="description"
@@ -75,12 +74,12 @@
             <div class="header_links_container">
                 <a class="header_link" href="{{ get_url(path="") }}#about_participation">参加する</a>
                 <a class="header_link" href="{{ get_url(path="@/blogs/_index.md") }}">ブログ</a>
-                <a class="header_link" href="{{ get_url(path="mentors.html") }}">メンター紹介</a>
+                <a class="header_link" href="{{ get_url(path="@/mentors.md") }}">メンター紹介</a>
             </div>
         </header>
-        <script src="scripts/smart_header.js"></script>
+        <script src="{{ get_url(path="scripts/smart_header.js") }}"></script>
 
-        {% block content %} {% endblock content %}
+        {% block content %}{% endblock content %}
 
         <footer>
             <div class="below_buttons_container">
