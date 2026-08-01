@@ -26,6 +26,8 @@ html,
 body {
     background: var(--background);
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -50,26 +52,10 @@ h3 {
     font-family: "SHS";
 }
 
-.below_buttons {
-    font-family: "SHS";
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    text-align: center;
-}
-
 .h_container {
     width: 100%;
     display: flex;
     align-items: center;
-}
-
-.below_buttons_container {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100pt;
 }
 
 main {
@@ -94,13 +80,6 @@ main {
 
     p {
         font-size: 1.2rem;
-    }
-
-    .below_buttons {
-        padding: 7pt;
-        border-radius: 25pt;
-        margin: 2pt;
-        font-size: 1.3rem;
     }
 
     .heading {
@@ -133,13 +112,6 @@ main {
 
     .subheading {
         font-size: 1.25rem;
-    }
-
-    .below_buttons {
-        padding: 0.75rem;
-        border-radius: 3rem;
-        margin: 0.1rem;
-        font-size: 1rem;
     }
 
     .h_icon {

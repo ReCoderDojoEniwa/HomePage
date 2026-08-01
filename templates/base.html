@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="general.css") }}" />
         <link rel="stylesheet" type="text/css" href="{{ get_url(path="header.css") }}" />
+        <link rel="stylesheet" type="text/css" href="{{ get_url(path="footer.css") }}" />
         <title>{% block title %}{{ config.title }}{% endblock title %}</title>
         <meta
             name="description"
@@ -82,11 +83,22 @@
         {% block content %}{% endblock content %}
 
         <footer>
-            <div class="below_buttons_container">
-                <a class="below_buttons" href="{{ get_url(path="") }}">トップに戻る</a>
-                <a class="below_buttons" href="{{ get_url(path="mentors.html") }}">メンター紹介へ</a>
+            <div class="footer_brand_bar">
+                <span></span><span></span><span></span><span></span>
             </div>
-            <p>連絡先 / coderdojoeniwa@gmail.com</p>
+            <div class="footer_inner">
+                <nav class="footer_nav">
+                    <a class="footer_nav_link" href="{{ get_url(path="") }}">トップに戻る</a>
+                    <a class="footer_nav_link" href="{{ get_url(path="@/blogs/_index.md") }}">ブログ</a>
+                    <a class="footer_nav_link" href="{{ get_url(path="@/mentors.md") }}">メンター紹介</a>
+                    <a class="footer_nav_link" href="https://docs.google.com/forms/d/e/1FAIpQLSeCYWfwvH88Lha3hIONAvgvMyEfrSKR_7mRo3wE07gnyd2T_A/viewform" target="_blank" rel="noopener noreferrer">参加する</a>
+                </nav>
+                <div class="footer_contact">
+                    <span class="footer_contact_icon">✉</span>
+                    <a href="mailto:coderdojoeniwa@gmail.com">coderdojoeniwa@gmail.com</a>
+                </div>
+                <p class="footer_copyright">© 2026 CoderDojo Eniwa</p>
+            </div>
         </footer>
     </body>
 </html>

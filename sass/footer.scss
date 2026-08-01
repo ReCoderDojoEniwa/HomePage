@@ -1,0 +1,157 @@
+@use "branding" as *;
+
+// ========================================
+// Brand color accent bar at top of footer
+// ========================================
+.footer_brand_bar {
+    display: flex;
+    height: 4px;
+    width: 100%;
+
+    span {
+        flex: 1;
+        display: block;
+
+        &:nth-child(1) { background-color: var(--1st-color); }
+        &:nth-child(2) { background-color: var(--2nd-color); }
+        &:nth-child(3) { background-color: var(--3rd-color); }
+        &:nth-child(4) { background-color: var(--4th-color); }
+    }
+}
+
+// ========================================
+// Footer base
+// ========================================
+footer {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    margin-top: 80pt;
+}
+
+.footer_inner {
+    max-width: 1024pt;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24pt;
+}
+
+// ========================================
+// Footer navigation (buttons)
+// ========================================
+.footer_nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10pt;
+}
+
+.footer_nav_link {
+    font-family: "SHS";
+    text-decoration: none;
+    color: #eeeeee;
+    background-color: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition:
+        border-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.15s ease;
+
+    &:hover {
+        color: #ffffff;
+        border-color: var(--1st-color);
+        transform: translateY(-2px);
+        box-shadow:
+            inset 4px 0 0 0 var(--1st-color),
+            inset 8px 0 0 0 var(--2nd-color),
+            inset 12px 0 0 0 var(--3rd-color),
+            inset 16px 0 0 0 var(--4th-color);
+    }
+}
+
+// ========================================
+// Contact section
+// ========================================
+.footer_contact {
+    display: flex;
+    align-items: center;
+    gap: 6pt;
+}
+
+.footer_contact_icon {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.footer_contact a {
+    font-family: "Source Code Pro";
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: var(--1st-color);
+    }
+}
+
+// ========================================
+// Copyright
+// ========================================
+.footer_copyright {
+    font-family: "SHS";
+    font-size: 0.75rem;
+    color: #666666;
+    margin: 0;
+    text-align: center;
+}
+
+// ========================================
+// Responsive: landscape (PC)
+// ========================================
+@media (orientation: landscape) {
+    .footer_inner {
+        padding: 32pt 5% 24pt;
+    }
+
+    .footer_nav_link {
+        padding: 8pt 20pt 8pt 24pt;
+        border-radius: 25pt;
+        font-size: 1rem;
+    }
+
+    .footer_contact a {
+        font-size: 1rem;
+    }
+}
+
+// ========================================
+// Responsive: portrait (mobile)
+// ========================================
+@media (orientation: portrait) {
+    .footer_inner {
+        padding: 24pt 5% 20pt;
+    }
+
+    .footer_nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer_nav_link {
+        padding: 0.7rem 1.5rem 0.7rem 1.8rem;
+        border-radius: 3rem;
+        font-size: 0.9rem;
+        width: 80%;
+        max-width: 280pt;
+    }
+
+    .footer_contact a {
+        font-size: 0.85rem;
+    }
+}
